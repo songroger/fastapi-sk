@@ -18,7 +18,7 @@ def create_app():
         allow_headers=["*"],
     )
 
-    app.mount('/static', StaticFiles(directory='static'), name='static')
+    # app.mount('/static', StaticFiles(directory='static'), name='static')
 
     # 应用启动和关闭时，增加监听事件，用来创建和关闭数据库链接。
     app.add_event_handler("startup", create_start_app_handler())
